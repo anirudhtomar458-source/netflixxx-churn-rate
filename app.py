@@ -44,14 +44,7 @@ if st.button("Calculate Churn Risk"):
     else:
         st.success("Low risk. This customer is likely to stay.")
 
-# --- Execution logic for Colab ---
-import urllib
-print("Your LocalTunnel Password/Endpoint IP is:",
-      urllib.request.urlopen('https://ipv4.icanhazip.com').read().decode('utf8').strip("\n"))
-
-# Run streamlit in the background
 import os
 os.system('streamlit run app.py &>/content/logs.txt &')
 
-# Expose port 8501
-!npx localtunnel --port 8501
+
